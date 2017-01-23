@@ -1,0 +1,38 @@
+CREATE DATABASE Chickens;
+
+CREATE TABLE Coup(id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+type ENUM("chick", "hen", "rooster"), DOB DATETIME, Coming_of_age DATETIME, DOD DATETIME);
+
+DESCRIBE Coup;
++---------------+-------------------------------+------+-----+---------+----------------+
+| Field         | Type                          | Null | Key | Default | Extra          |
++---------------+-------------------------------+------+-----+---------+----------------+
+| id            | int(11)                       | NO   | PRI | NULL    | auto_increment |
+| type          | enum('chick','hen','rooster') | YES  |     | NULL    |                |
+| DOB           | datetime                      | YES  |     | NULL    |                |
+| Coming_of_age | datetime                      | YES  |     | NULL    |                |
+| DOD           | datetime                      | YES  |     | NULL    |                |
++---------------+-------------------------------+------+-----+---------+----------------+
+
+--Research--
+
+How many rooster, hen and chicks existed in the Barn on a specific date
+How many chicks will come to age on a specific date
+
+Table: Barn
+1. DATETIME
+2. rooster INT
+3. hen INT
+4. chicks INT
+5. assume 6 months for chicks to mature 
+6. assume 50/50 chance to be a hen or rooster
+
+8. assume 2/3 of eggs hatch
+9. assume 1 egg per day per hen
+10. assume 21 days for egg to hatch
+11. assume hens lay eggs for 6 years
+
+Chicken life cycle; egg 21 days, chick 6 months, rooster/hen for 6 years
+, after they are killed. The more you know.
+
+
