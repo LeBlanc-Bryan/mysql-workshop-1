@@ -1,0 +1,23 @@
+CREATE TABLE Account (account_number int NOT NULL);
+
+Result:
+
+Query OK, 0 rows affected (0.02 sec)
+
+CREATE TABLE AddressBook (Address varchar(120) NOT NULL);
+
+Result:
+
+Query OK, 0 rows affected (0.01 sec)
+
+CREATE TABLE Entry(Entry int NOT NULL);   
+
+Result:
+
+Query OK, 0 rows affected (0.01 sec)
+
+CREATE TABLE Test(Test varchar(40));
+
+Result:
+
+Query OK, 0 rows affected (0.00 sec)

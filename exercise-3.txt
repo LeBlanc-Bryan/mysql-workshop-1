@@ -1,5 +1,5 @@
-mysql-ctl start
-mysql -u leblancbryan
-CREATE DATABASE decodemtl_test;
-CREATE DATABASE decodemtl_addressbook;
 DROP DATABASE decodemtl_test;
+
+Result:
+
+Query OK, 0 rows affected (0.00 sec)

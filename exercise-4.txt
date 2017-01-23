@@ -1,6 +1,14 @@
-mysql-ctl start
-mysql -u leblancbryan
-CREATE DATABASE decodemtl_test;
-CREATE DATABASE decodemtl_addressbook;
-DROP DATABASE decodemtl_test;
 SHOW DATABASES;
+
+Result:
++-----------------------+
+| Database              |
++-----------------------+
+| information_schema    |
+| c9                    |
+| decodemtl_addressbook |
+| mysql                 |
+| performance_schema    |
+| phpmyadmin            |
++-----------------------+
+6 rows in set (0.00 sec)
