@@ -1,0 +1,58 @@
+ALTER TABLE Account ADD COLUMN(id int PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+email VARCHAR(255), password VARCHAR(40), createdOn DATETIME, modifiedOn DATETIME);  
+
+ALTER TABLE Account DROP COLUMN account_number;
+
+DESCRIBE Account;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | YES  |     | NULL    |                |
+| password   | varchar(40)  | YES  |     | NULL    |                |
+| createdOn  | datetime     | YES  |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+ALTER TABLE AddressBook ADD COLUMN(id INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+accountId INT, name VARCHAR(255), CreatedOn DATETIME, modifiedOn DATETIME); 
+
+ALTER TABLE AddressBook DROP COLUMN Address;
+
+DESCRIBE AddressBook;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| accountId  | int(11)      | YES  |     | NULL    |                |
+| name       | varchar(255) | YES  |     | NULL    |                |
+| CreatedOn  | datetime     | YES  |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+ALTER TABLE Entry ADD COLUMN(id int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+addressBookId INT, firstName VARCHAR(255), lastName VARCHAR(255), 
+birthday DATETIME, type ENUM('home',' work','other'), 
+subtype ENUM('phone', 'address', 'email'), contentLineOne VARCHAR(255), 
+contentLineTwo VARCHAR(255), contentLineThree VARCHAR(255), 
+contentLineFour VARCHAR(255), contentLineFive VARCHAR(255));
+
+ALTER TABLE Entry DROP COLUMN Entry;
+
+DESCRIBE Entry;
++------------------+---------------------------------+------+-----+---------+----------------+
+| Field            | Type                            | Null | Key | Default | Extra          |
++------------------+---------------------------------+------+-----+---------+----------------+
+| id               | int(11)                         | NO   | PRI | NULL    | auto_increment |
+| addressBookId    | int(11)                         | YES  |     | NULL    |                |
+| firstName        | varchar(255)                    | YES  |     | NULL    |                |
+| lastName         | varchar(255)                    | YES  |     | NULL    |                |
+| birthday         | datetime                        | YES  |     | NULL    |                |
+| type             | enum('home',' work','other')    | YES  |     | NULL    |                |
+| subtype          | enum('phone','address','email') | YES  |     | NULL    |                |
+| contentLineOne   | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineTwo   | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineThree | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFour  | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFive  | varchar(255)                    | YES  |     | NULL    |                |
++------------------+---------------------------------+------+-----+---------+----------------+
