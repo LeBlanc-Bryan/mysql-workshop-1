@@ -1,0 +1,14 @@
+mysql> USE decodemtl_addressbook;
+
+Result:
+
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql> DROP TABLE Test;
+
+Result:
+
+Query OK, 0 rows affected (0.00 sec)
