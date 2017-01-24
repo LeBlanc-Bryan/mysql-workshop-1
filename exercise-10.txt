@@ -1,0 +1,22 @@
+DB = Hotel
+Table = Rooms
+    number - key
+    rentable - true/false
+    kitchen - true/false
+    windows - int
+    carpets - true/false
+    occupancy - int
+    Checkin - DATETIme
+    Checkout - DATEtime
+    
+Table = Floors
+    id - key
+    rooms - room id
+    
+mysql> create database hotel; 
+mysql> create table rooms (number int, rentable tinyint(1), occupancy int, windows int, kitchen tinyint(1), carpet tinyint(1), checkin datetime, checkout datetime, primary key (number));    
+mysql> insert into rooms values (101, 1, 4, 3, 1, 1, checkin date, checkout date); 
+mysql> insert into rooms values (102, 1, 2, 2, 0, 1, checkin date, checkout date);
+mysql> insert into rooms values (104, 0, 0, 1, 0, 0, checkin date, checkout date);    
+mysql> insert into rooms values (103, 1, 4, 4, 1, 0, checkin date, checkout date);
+mysqpl> create table floors:
